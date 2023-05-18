@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView listView;
     private List<Registro> registros;
     private ArrayAdapter<Registro> adapter;
-    private MiDBHelper dbHelper;
+    private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dbHelper = new MiDBHelper(this);
+        dbHelper = new DBHelper(this);
 
         editTextName = findViewById(R.id.editTextName);
         buttonSave = findViewById(R.id.buttonSave);
